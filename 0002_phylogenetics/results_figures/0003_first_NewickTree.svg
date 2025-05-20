@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 888 834.89">
+  <!-- Generator: Adobe Illustrator 29.5.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 137)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #505050;
+        font-family: Arial-BoldMT, Arial;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .st0, .st1 {
+        isolation: isolate;
+      }
+
+      .st2 {
+        stroke: #aaa;
+        stroke-dasharray: 3.47 6.94;
+        stroke-dashoffset: 6.94px;
+        stroke-width: .21px;
+      }
+
+      .st2, .st3 {
+        stroke-linecap: round;
+        stroke-miterlimit: 6.94;
+      }
+
+      .st2, .st3, .st4 {
+        fill: none;
+      }
+
+      .st3 {
+        stroke: #000;
+        stroke-width: .69px;
+      }
+
+      .st1 {
+        font-family: Arial-ItalicMT, Arial;
+        font-size: 13.89px;
+        font-style: italic;
+      }
+
+      .st4 {
+        stroke: #505050;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="mainHolder">
+    <g id="treeHolder">
+      <g>
+        <path class="st2" d="M326.06,802h-3.47"/>
+        <text class="st1" transform="translate(326.06 806.16)"><tspan x="0" y="0">Drosophila santomea</tspan></text>
+        <path class="st3" d="M322.59,802h-2.7"/>
+      </g>
+      <g>
+        <path class="st2" d="M325.98,781.16h-3.47"/>
+        <text class="st1" transform="translate(325.98 785.33)"><tspan x="0" y="0">Drosophila yakuba</tspan></text>
+        <path class="st3" d="M322.5,781.16h-2.62"/>
+      </g>
+      <g>
+        <path class="st2" d="M325.33,760.33h-3.47"/>
+        <text class="st1" transform="translate(325.33 764.5)"><tspan x="0" y="0">Drosophila teissieri</tspan></text>
+        <path class="st3" d="M321.86,760.33h-5.24"/>
+      </g>
+      <g>
+        <path class="st2" d="M326.35,739.5h-3.47"/>
+        <text class="st1" transform="translate(326.35 743.66)"><tspan x="0" y="0">Drosophila erecta</tspan></text>
+        <path class="st3" d="M322.88,739.5h-11.85"/>
+      </g>
+      <g>
+        <path class="st2" d="M333.7,718.66h-3.47"/>
+        <text class="st1" transform="translate(333.7 722.83)"><tspan x="0" y="0">Drosophila sechellia</tspan></text>
+        <path class="st3" d="M330.23,718.66h-7.83"/>
+      </g>
+      <g>
+        <path class="st2" d="M328.67,697.83h-3.47"/>
+        <text class="st1" transform="translate(328.67 702)"><tspan x="0" y="0">0001 Drosophila simulans</tspan></text>
+        <path class="st3" d="M325.2,697.83h-2.81"/>
+      </g>
+      <g>
+        <path class="st2" d="M327.64,677h-3.47"/>
+        <text class="st1" transform="translate(327.64 681.16)"><tspan x="0" y="0">Drosophila mauritiana</tspan></text>
+        <path class="st3" d="M324.17,677h-2.17"/>
+      </g>
+      <g>
+        <path class="st2" d="M328.22,656.16h-3.47"/>
+        <text class="st1" transform="translate(328.22 660.33)"><tspan x="0" y="0">Drosophila melanogaster</tspan></text>
+        <path class="st3" d="M324.75,656.16h-6.89"/>
+      </g>
+      <g>
+        <path class="st2" d="M320.25,635.33h-3.47"/>
+        <text class="st1" transform="translate(320.25 639.5)"><tspan x="0" y="0">Drosophila eugracilis</tspan></text>
+        <path class="st3" d="M316.78,635.33h-28.1"/>
+      </g>
+      <g>
+        <path class="st2" d="M313.97,614.5h-3.47"/>
+        <text class="st1" transform="translate(313.97 618.66)"><tspan x="0" y="0">Drosophila suzukii</tspan></text>
+        <path class="st3" d="M310.5,614.5h-5.14"/>
+      </g>
+      <g>
+        <path class="st2" d="M313.52,593.66h-3.47"/>
+        <text class="st1" transform="translate(313.52 597.83)"><tspan x="0" y="0">Drosophila subpulchrella</tspan></text>
+        <path class="st3" d="M310.05,593.66h-4.68"/>
+      </g>
+      <g>
+        <path class="st2" d="M316.67,572.83h-3.47"/>
+        <text class="st1" transform="translate(316.67 577)"><tspan x="0" y="0">Drosophila biarmipes</tspan></text>
+        <path class="st3" d="M313.2,572.83h-13.13"/>
+      </g>
+      <g>
+        <path class="st2" d="M316.94,552h-3.47"/>
+        <text class="st1" transform="translate(316.94 556.16)"><tspan x="0" y="0">Drosophila takahashii</tspan></text>
+        <path class="st3" d="M313.47,552h-21.86"/>
+      </g>
+      <g>
+        <path class="st2" d="M313.16,531.16h-3.47"/>
+        <text class="st1" transform="translate(313.16 535.33)"><tspan x="0" y="0">Drosophila gunungcola</tspan></text>
+        <path class="st3" d="M309.69,531.16h-4.85"/>
+      </g>
+      <g>
+        <path class="st2" d="M314.12,510.33h-3.47"/>
+        <text class="st1" transform="translate(314.12 514.5)"><tspan x="0" y="0">Drosophila elegans</tspan></text>
+        <path class="st3" d="M310.65,510.33h-5.82"/>
+      </g>
+      <g>
+        <path class="st2" d="M310.77,489.5h-3.47"/>
+        <text class="st1" transform="translate(310.77 493.66)"><tspan x="0" y="0">Drosophila rhopaloa</tspan></text>
+        <path class="st3" d="M307.29,489.5h-17.97"/>
+      </g>
+      <g>
+        <path class="st2" d="M321.68,468.66h-3.47"/>
+        <text class="st1" transform="translate(321.68 472.83)"><tspan x="0" y="0">Drosophila ananassae</tspan></text>
+        <path class="st3" d="M318.21,468.66h-64.54"/>
+      </g>
+      <g>
+        <path class="st2" d="M311.21,447.83h-3.47"/>
+        <text class="st1" transform="translate(311.21 452)"><tspan x="0" y="0">Drosophila guanche</tspan></text>
+        <path class="st3" d="M307.74,447.83h-7"/>
+      </g>
+      <g>
+        <path class="st2" d="M308.77,427h-3.47"/>
+        <text class="st1" transform="translate(308.77 431.17)"><tspan x="0" y="0">Drosophila subobscura</tspan></text>
+        <path class="st3" d="M305.3,427h-4.56"/>
+      </g>
+      <g>
+        <path class="st2" d="M302.98,406.16h-3.47"/>
+        <text class="st1" transform="translate(302.98 410.33)"><tspan x="0" y="0">Drosophila obscura</tspan></text>
+        <path class="st3" d="M299.51,406.16h-15.77"/>
+      </g>
+      <g>
+        <path class="st2" d="M300.98,385.33h-3.47"/>
+        <text class="st1" transform="translate(300.98 389.5)"><tspan x="0" y="0">Drosophila pseudoobscura</tspan></text>
+        <path class="st3" d="M297.51,385.33h-1.9"/>
+      </g>
+      <g>
+        <path class="st2" d="M300.82,364.5h-3.47"/>
+        <text class="st1" transform="translate(300.82 368.67)"><tspan x="0" y="0">Drosophila persimilis</tspan></text>
+        <path class="st3" d="M297.35,364.5h-1.74"/>
+      </g>
+      <g>
+        <path class="st2" d="M301.17,343.67h-3.47"/>
+        <text class="st1" transform="translate(301.17 347.83)"><tspan x="0" y="0">Drosophila miranda</tspan></text>
+        <path class="st3" d="M297.7,343.67h-3.95"/>
+      </g>
+      <g>
+        <path class="st2" d="M308.06,322.83h-3.47"/>
+        <text class="st1" transform="translate(308.06 327)"><tspan x="0" y="0">Drosophila willistoni</tspan></text>
+        <path class="st3" d="M304.59,322.83h-111.17"/>
+      </g>
+      <g>
+        <path class="st2" d="M732.31,302h-3.47"/>
+        <text class="st1" transform="translate(732.31 306.17)"><tspan x="0" y="0">Glossina morsitans</tspan></text>
+        <path class="st3" d="M728.84,302h-233.94"/>
+      </g>
+      <g>
+        <path class="st2" d="M636.09,281.17h-3.47"/>
+        <text class="st1" transform="translate(636.09 285.33)"><tspan x="0" y="0">Lucilia cuprina</tspan></text>
+        <path class="st3" d="M632.62,281.17h-137.72"/>
+      </g>
+      <g>
+        <path class="st2" d="M252.87,260.33h-3.47"/>
+        <text class="st1" transform="translate(252.87 264.5)"><tspan x="0" y="0">Drosophila busckii</tspan></text>
+        <path class="st3" d="M249.39,260.33h-114.72"/>
+      </g>
+      <g>
+        <path class="st2" d="M187.57,239.5h-3.47"/>
+        <text class="st1" transform="translate(187.57 243.67)"><tspan x="0" y="0">Drosophila innubila</tspan></text>
+        <path class="st3" d="M184.1,239.5h-42.97"/>
+      </g>
+      <g>
+        <path class="st2" d="M203.03,218.67h-3.47"/>
+        <text class="st1" transform="translate(203.03 222.83)"><tspan x="0" y="0">Drosophila albomicans</tspan></text>
+        <path class="st3" d="M199.56,218.67h-58.43"/>
+      </g>
+      <g>
+        <path class="st2" d="M179.08,197.83h-3.47"/>
+        <text class="st1" transform="translate(179.08 202)"><tspan x="0" y="0">Drosophila grimshawi</tspan></text>
+        <path class="st3" d="M175.6,197.83h-70.7"/>
+      </g>
+      <g>
+        <path class="st2" d="M128.99,177h-3.47"/>
+        <text class="st1" transform="translate(128.99 181.17)"><tspan x="0" y="0">Drosophila virilis</tspan></text>
+        <path class="st3" d="M125.52,177h-35.88"/>
+      </g>
+      <g>
+        <path class="st2" d="M81.04,156.17h-3.47"/>
+        <text class="st1" transform="translate(81.04 160.33)"><tspan x="0" y="0">Drosophila hydei</tspan></text>
+        <path class="st3" d="M77.57,156.17h-20.97"/>
+      </g>
+      <g>
+        <path class="st2" d="M46.18,135.33h-3.47"/>
+        <text class="st1" transform="translate(46.18 139.5)"><tspan x="0" y="0">Drosophila mojavensis</tspan></text>
+        <path class="st3" d="M42.7,135.33h-3.32"/>
+      </g>
+      <g>
+        <path class="st2" d="M48.83,114.5h-3.47"/>
+        <text class="st1" transform="translate(48.83 118.67)"><tspan x="0" y="0">Drosophila arizonae</tspan></text>
+        <path class="st3" d="M45.36,114.5h-5.97"/>
+      </g>
+      <g>
+        <path class="st2" d="M49.07,93.67h-3.47"/>
+        <text class="st1" transform="translate(49.07 97.83)"><tspan x="0" y="0">Drosophila navojoa</tspan></text>
+        <path class="st3" d="M45.6,93.67h-11.19"/>
+      </g>
+      <path class="st3" d="M39.38,124.92h-4.98M39.38,135.33v-20.83"/>
+      <path class="st3" d="M141.13,229.08h-23.24M141.13,239.5v-20.83"/>
+      <path class="st3" d="M295.61,374.91h-1.87M295.61,385.33v-20.83"/>
+      <path class="st3" d="M293.74,359.29h-15.78M293.74,374.91v-31.25"/>
+      <path class="st3" d="M300.74,437.41h-17M300.74,447.83v-20.83"/>
+      <path class="st3" d="M283.74,421.79h-5.77M283.74,437.41v-31.25"/>
+      <path class="st3" d="M277.96,390.54h-55.83M277.96,421.79v-62.5"/>
+      <path class="st3" d="M304.83,520.75h-15.51M304.83,531.16v-20.83"/>
+      <path class="st3" d="M289.32,505.12h-8.12M289.32,520.75v-31.25"/>
+      <path class="st3" d="M322.39,708.25h-.39M322.39,718.66v-20.83"/>
+      <path class="st3" d="M322,692.62h-4.14M322,708.25v-31.25"/>
+      <path class="st3" d="M317.86,674.39h-9.75M317.86,692.62v-36.46"/>
+      <path class="st3" d="M319.88,791.58h-3.26M319.88,802v-20.83"/>
+      <path class="st3" d="M316.62,775.95h-5.6M316.62,791.58v-31.25"/>
+      <path class="st3" d="M311.02,757.72h-2.91M311.02,775.95v-36.46"/>
+      <path class="st3" d="M308.11,716.06h-19.44M308.11,757.72v-83.33"/>
+      <path class="st3" d="M288.67,675.69h-2.57M288.67,716.06v-80.73"/>
+      <path class="st3" d="M305.37,604.08h-5.3M305.37,614.5v-20.83"/>
+      <path class="st3" d="M300.07,588.46h-8.46M300.07,604.08v-31.25"/>
+      <path class="st3" d="M291.61,570.23h-5.51M291.61,588.46v-36.46"/>
+      <path class="st3" d="M286.1,622.96h-4.9M286.1,675.69v-105.47"/>
+      <path class="st3" d="M281.2,564.04h-27.53M281.2,622.96v-117.84"/>
+      <path class="st3" d="M253.67,516.35h-31.53M253.67,564.04v-95.38"/>
+      <path class="st3" d="M222.13,453.45h-28.71M222.13,516.35v-125.81"/>
+      <path class="st3" d="M193.42,388.14h-20.79M193.42,453.45v-130.61"/>
+      <path class="st3" d="M494.9,291.58H172.64M494.9,302v-20.83"/>
+      <path class="st3" d="M172.64,339.86h-37.96M172.64,388.14v-96.56"/>
+      <path class="st3" d="M134.68,300.1h-16.79M134.68,339.86v-79.53"/>
+      <path class="st3" d="M117.88,264.59h-12.98M117.88,300.1v-71.01"/>
+      <path class="st3" d="M104.91,231.21h-15.27M104.91,264.59v-66.76"/>
+      <path class="st3" d="M89.64,204.11h-33.04M89.64,231.21v-54.21"/>
+      <path class="st3" d="M56.6,180.14h-22.19M56.6,204.11v-47.94"/>
+      <path class="st3" d="M34.4,136.9h0M34.4,180.14v-86.47"/>
+    </g>
+  </g>
+  <g id="wrapperHolder">
+    <g>
+      <text class="st0" transform="translate(30 62)"><tspan x="0" y="0">Tree scale: 0.1</tspan></text>
+      <path class="st4" d="M122.06,58.4h76.93"/>
+      <path class="st4" d="M122.06,55.4v6M198.99,55.4v6M160.53,58.4v2"/>
+    </g>
+  </g>
+</svg>

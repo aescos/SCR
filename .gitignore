@@ -40,7 +40,6 @@
 *.fasta
 *.tif
 *.pptx
-0003_hairpinConservation/data/lifted_0005_Drosophila_elegans_dna_masked.bed
 *.tsv
 *.bed
 *.csv
