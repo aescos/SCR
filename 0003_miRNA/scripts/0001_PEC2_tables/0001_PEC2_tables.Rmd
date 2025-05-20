@@ -1,0 +1,85 @@
+---
+title: "0001_PEC2_tables"
+author: "Alejandra Escos"
+date: "2025-04-07"
+output: html_document
+---
+First always remove all the lists from the R enviroment
+
+- rm: remove
+- ls(): Lists all objects from the enviroment
+
+```{r}
+rm(list = ls())
+```
+
+Code set up for the whole envirment of R
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+### Table preparation
+
+```{r}
+library(dplyr)
+library(tidyr)
+packageVersion("dplyr")
+packageVersion("tidyr")
+version # R version
+```
+
+Installation of the following package:
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+
+```{r}
+library(Biostrings)
+packageVersion("Biostrings")
+```
+
+```{r}
+fasta_3UTR_dmle <- readDNAStringSet("/Users/alejandraescos/Documents/github/SCR/data/0003_dmle_3UTR.fa", format = "fasta")
+```
+
+```{r}
+fasta_df <- data.frame(
+  ID = names(fasta_3UTR_dmle),
+  Sequence = as.character(fasta_3UTR_dmle),
+  stringsAsFactors = FALSE
+)
+
+head(fasta_df)
+```
+
+```{r}
+fasta_df_separate <- fasta_df %>%
+  separate(
+    col = "ID",
+    into = c("Gene.ID", "position"),
+    sep = "::"
+  )
+head(fasta_df_separate)
+```
+
+
+```{r}
+jungreis <- read.delim('/Users/alejandraescos/Documents/github/SCR/PEC2/data/Supplemental_Data_S1.txt', header = TRUE)
+```
+
+
+
+```{r}
+jungreis_3UTR <- fasta_df_separate %>%
+  inner_join(jungreis, by = "Gene.ID")
+head(merged_df)
+```
+
+```{r}
+write.csv(jungreis_3UTR, 
+          file = "/Users/alejandraescos/Documents/github/SCR/PEC2/data/jungreis_3UTR.csv",
+          sep = "\t")
+```
+

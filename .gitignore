@@ -1,0 +1,46 @@
+*.gtf
+*.fa
+.DS_Store
+.Rproj.user
+*.fa.gz
+*.faa
+*.out
+*.gz
+*.hmm
+*.prfl
+*.tbl
+*.log
+*.phylip
+*.masked
+*.hal
+*.ppt
+*.docx
+*.bed
+*.bb
+*.png
+0020_cactus_alignment.bigmaf.bb
+0020_cactus_alignment.bigmaf.summary.bb
+2025_SCR.pptx
+# external data
+0001_hairpin/data
+0002_phylogenetics/data
+0003_hairpinConservation/data
+0003_miRNA/data
+# large binaries
+2025_SCR.pptx
+*.fa.masked
+*.phylip
+*.fasta
+*.tif
+*.pptx
+# large binaries
+2025_SCR.pptx
+*.fa.masked
+*.phylip
+*.fasta
+*.tif
+*.pptx
+0003_hairpinConservation/data/lifted_0005_Drosophila_elegans_dna_masked.bed
+*.tsv
+*.bed
+*.csv

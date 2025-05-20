@@ -1,0 +1,58 @@
+---
+title: "SCR"
+author: "Alejandra Escos"
+date: "2025-04-02"
+output: html_document
+---
+First always remove all the lists from the R enviroment
+
+- rm: remove
+- ls(): Lists all objects from the enviroment
+
+```{r}
+rm(list = ls())
+```
+
+Code set up for the whole envirment of R
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+### Table preparation
+
+```{r}
+library(dplyr)
+library(tidyr)
+packageVersion("dplyr")
+packageVersion("tidyr")
+version # R version
+```
+```{r}
+subopt <- read.delim('/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/0006__dmle_3UTR_trim_60nt_subopt_select.tsv', header = TRUE)
+```
+
+```{r}
+subopt_Y <- subopt %>% filter(Hairpin == 'Y')
+subopt_Y_minMFE <- subopt_Y %>%
+  group_by(GeneID) %>%
+  slice_min(order_by = MFE, with_ties = FALSE) %>% # Keeps the single row with minimum value for each group
+  ungroup()
+
+subopt_Y_minMFE <- subopt_Y_minMFE %>%
+  select(-Hairpin, -MFE)
+```
+
+```{r}
+
+subopt_Y_minMFE <- as.data.frame(subopt_Y_minMFE)
+write.table(
+  subopt_Y_minMFE,
+  file      = "/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/subopt_Y_minMFE.txt",  # the output filename
+  sep       = "\t",                   # tab-separated
+  quote     = FALSE,                  # don’t wrap character columns in quotes
+  row.names = FALSE,                  # don’t write row numbers
+  col.names = TRUE                    # write header
+)
+```
+
