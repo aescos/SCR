@@ -12,7 +12,7 @@ selected_list = set(sel[0].astype(str))
 
 # === CONFIG ===
 gtf_file = "Drosophila_melanogaster.BDGP6.46.60.gtf"
-output_bed = "dmle_selected_three_prime_utr.bed"
+output_bed = "0015_dmle_selected_three_prime_utr.bed"
 feature_type = "three_prime_utr"
 attribute_key = "gene_id"
 

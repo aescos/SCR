@@ -11,7 +11,8 @@ data: 0001_dmle.fa, 0001_dmle.gtf
 lab_book: 0001_lab_book_hairpin
 zsh: zsh 5.9 (arm64-apple-darwin24.0)
 
-step2: Annotation filtering of .gtf that takes the location of the fist 3'UTR 
+step2: Annotation filtering of .gtf that takes the location of the earliest 
+    (lowest 'start') 3' UTR per gene
 date: 01042025
 lab_book: 0002_lab_book_hairpin
 data: use 0001_dmle.gtf to generate 0002_dmle_3UTR.gtf
@@ -24,7 +25,7 @@ data: use 0001_dmle.fa and 0002_dmle_3UTR.gtf to generate 0003_dmle_3UTR.fa
 bedtools: https://bedtools.readthedocs.io/en/latest/content/tools/getfasta.html
 zsh: zsh 5.9 (arm64-apple-darwin24.0)
 
-step4: Trim the 3'UTR fasta file
+step4: Trim the 3'UTR fasta file to 60 nt
 date: 02042025
 lab_book: 0004_lab_book_hairpin
 data: use 0003_dmle_3UTR.fa to generate 0004_dmle_3UTR_trim.fa
@@ -39,7 +40,8 @@ ViennaRNA-2.7.0
 step6: Filter hairpin conditions
 date: 02042025
 lab_book: 0006_lab_book_hairpin
-data: use 0005_dmle_3UTR_trim_hairpin.txt to generate 0006__dmle_3UTR_trim_60nt_subopt_select.tsv
+data: use 0005_dmle_3UTR_trim_hairpin.txt to 
+    generate 0006__dmle_3UTR_trim_60nt_subopt_select.tsv
 python 3.12.4: 0006_hairpin_select.py
 	# Config
 	length_min = 35
