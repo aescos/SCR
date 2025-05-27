@@ -14,8 +14,7 @@ For each .sto file:
  5. Determine the next 60 ungapped reference positions and their alignment indices.
  6. Extract those columns for all species and the SS_cons line.
  7. Write a trimmed Stockholm to the output directory.
-Optional:
- - Extract a gap-free FASTA of the Dmel hairpin and run RNAsubopt for subopt structures.
+
 """
 import sys
 import argparse

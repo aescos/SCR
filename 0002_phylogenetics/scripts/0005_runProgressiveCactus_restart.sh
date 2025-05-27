@@ -34,4 +34,5 @@ module load PDC singularity
 cd /cfs/klemming/projects/supr/naiss2025-22-683/0005_cactus
 
 # Launch Progressive Cactus
+# export CACTUS_TMPDIR=/cfs/klemming/home/a/aescos/Private/0005_cactus/tmp/
 srun singularity exec ${PDC_SHUB}/cactus-v2.9.8.img cactus --restart  cactus_workdir 0005_seqfile.txt cactus_alignment.hal

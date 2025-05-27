@@ -9,7 +9,7 @@ Basic structure:
 drifter,vvl = FBgn0086680
 CG6282 = FBgn0035914
 
-### BUSCO from orthoBD
+### Perform BUSCO from orthoBD, to find all protein orthologs
 https://busco.ezlab.org/busco_userguide.html#busco-pipelines
 
 1.  DATA-ORIGIN:

@@ -9,8 +9,7 @@ Basic structure:
 drifter,vvl = FBgn0086680
 CG6282 = FBgn0035914
 
-### Parse protein data
-
+### Parse protein sequence original data
 
 1.  DATA-ORIGIN:
 path(/Users/alejandraescos/Documents/github/SCR/0002_phylogenetics/data)

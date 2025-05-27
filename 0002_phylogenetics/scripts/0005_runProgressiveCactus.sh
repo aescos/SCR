@@ -31,7 +31,7 @@ module load PDC singularity
 # To complete the module load
 # source $PCROOT/environment
 # Move into the directory where your cactus lives
-cd /cfs/klemming/home/a/aescos/Private/0005_cactus
+cd /cfs/klemming/projects/supr/naiss2025-22-683/0005_cactus
 
 # Launch Progressive Cactus
 # export CACTUS_TMPDIR=/cfs/klemming/home/a/aescos/Private/0005_cactus/tmp/

@@ -9,11 +9,10 @@ Basic structure:
 drifter,vvl = FBgn0086680
 CG6282 = FBgn0035914
 
-### Trim sctockholm file
-
+### Test sequence conservation with esl-alistat
 
 1.  DATA-ORIGIN:
-path(/Users/alejandraescos/Documents/github/SCR/0002_phylogenetics/data)
+path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 
 2.  DATA-DATE:
 20250512
@@ -23,39 +22,33 @@ SUPERMATRIX.fasta
 
 4.  DOWLOADED-SCRIPT:
 
-```
-python3 0021_inject_hairpins.py \
-  -s /Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/0007_subopt_Y_minMFE.txt \
-  -i /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_trimmed_by_stop \
-  -o /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_annotated
-```
+Clean up duplicate Stockholm headers so downstream tools (e.g. esl-alistat) won’t complain.
 
 ```
+cd /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_trimmed_by_stop
+mkdir -p 0022_fa_chunks_60nt_stats
 
+for f in *.sto; do
+  awk '
+    NR==1 { print; next }
+    $0 == "# STOCKHOLM 1.0" && NR==2 { next }
+    { print }
+  ' "$f" > 0022_fa_chunks_60nt_stats/"$f"
+done
 ```
-
+It performed the statistics of the sequence conservation
+```
+for a in 0022_fa_chunks_60nt_stats/*.sto; do
+  base=$(basename "$a" .sto)
+  esl-alistat "$a" > 0022_fa_chunks_60nt_stats/"$base".txt
+done
+```
+it give this error:
+   two # STOCKHOLM 1.0 headers in a row?
+   while reading Stockholm file 0022_fa_chunks_60nt_stats/FBgn0038897_3R_21742688_21743987.sto
+   at or near line 2
+So I just go to that file, eliminate the extra header and re-run.
 
 5.  SOFTWARE-VERSION:
-
-***ChatGPT***
-
-
-
-3. Assess secondary-structure conservation
-A. Using RNAz
-Install: part of the Vienna-RNA package + RNAz.
-
-Run on each MAF:
-
-```
-rnazWindow.pl --maf maf/${name}.maf --window 120 --slide 40 \
-  | rnazCompute.pl > rnaz/${name}.rnaz
-This splits the UTR alignment into overlapping windows (120 nt wide, 40 nt slide).
-
-RNAz assigns a p-value and “RNA class” probability for each window.
-
-Parse results to find windows with P > 0.5 (likely conserved structures) and map back to coordinates.
-
-B. Using EvoFold (alternative)
-EvoFold from UCSC also detects conserved RNA structures in MAF blocks; you’d need the phyloP tree model for Drosophila.
-```
+Easel 0.46
+esl-alistat :: show summary statistics for a multiple sequence alignment file
