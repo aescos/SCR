@@ -1,32 +1,44 @@
 drifter,vvl = FBgn0086680
 CG6282 = FBgn0035914
 
-raw_data: Original raw data
-data: From ensemble download protein and dna FASTA sequences
-lab_book: 0000_lab_book_phylogenetics
-date: 20250426 and 20250414
-
-step1: parse protein sequence original data
-date: 16042025
-data: 0001_*_longest_isoform.fa
-lab_book: 0001_lab_book_phylogenetics
+step15: Have an index of locations of interest from the hairpin prediction
+date: 20250521
+data: 0007_subopt_Y_minMFE.bed
+lab_book: 0015_lab_book_hairpinConservation
 zsh: python 3.12.4
 
-step2: Perform BUSCO from orthoBD, to find all protein orthologs
-date: 16042025
-data: 0002_*_longest_isoform_busco folders
-lab_book: 0002_lab_book_phylogenetics
-zsh: zsh 5.9 (arm64-apple-darwin24.0)
+step16: +/- 33 from the stop codon, depending on strand location to the index of location
+date: 20250521
+data: 0015_dmle_selected_three_prime_utr.bed
+lab_book: 0016_lab_book_hairpinConservation
+zsh: python 3.12.4
 
-step3: With BUSCO file, now perform BUSCO phylogenetics to generate protein alignment
-matrix
-date: 16042025
-data: SUPERMATRIX.fasta
-lab_book: 0003_lab_book_phylogenetics
-zsh: zsh 5.9 (arm64-apple-darwin24.0)
+step17: Obtain maf_chunks from HAL file
+date: 20250526
+data: 0016_dmle_selected_three_prime_utr_extend.bed
+lab_book: 0017_lab_book_hairpinConservation
+zsh: python 3.12.4
 
-step4: 
-date: 16042025
-data: 0002_*_longest_isoform_busco folders
-lab_book: 0003_lab_book_phylogenetics
-zsh: zsh 5.9 (arm64-apple-darwin24.0)
+step18: Obtain fasta_chunks taking into account if + or - strand
+date: 20250526
+data: 0016_dmle_selected_three_prime_utr_extend.bed
+lab_book: 0018_lab_book_hairpinConservation
+zsh: python 3.12.4
+
+step19: Generate stockholm file with trimmed headers and pads sequences
+date: 20250526
+data: 0018_fa_chunks folder
+lab_book: 0019_lab_book_hairpinConservation
+zsh: python 3.12.4
+
+step20: Extract the 60‐nt windows right after the first stop codon from those .sto
+date: 20250527
+data: 0019_fa_chunks_trimmed
+lab_book: 0020_lab_book_hairpinConservation
+zsh: python 3.12.4
+
+step21: Test sequence conservation with esl-alistat
+date: 20250527
+data: 0020_fa_chunks_trimmed_by_stop
+lab_book: 0021_lab_book_hairpinConservation
+zsh: Easel 0.46

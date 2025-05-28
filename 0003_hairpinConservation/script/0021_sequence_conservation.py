@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 # ----------------------------------------------------------------
 # CONFIGURE THIS: wherever your .txt files live
-stats_dir = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0022_fa_chunks_60nt_stats"
+stats_dir = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0021_fa_chunks_60nt_stats"
 pattern   = os.path.join(stats_dir, "*.txt")
 # ----------------------------------------------------------------
 
@@ -38,6 +38,10 @@ print("number of records parsed:", len(df))
 print("columns:", df.columns.tolist())
 print(df.head())
 
+# ** NEW: keep only the 60-nt windows **
+df60 = df[df["aln_length"] == 60].copy()
+print("only 60-nt windows:", len(df60))
+
 # 3) plot distribution of alignment lengths
 plt.figure()
 df["aln_length"].hist(bins=30)
@@ -49,7 +53,7 @@ plt.show()
 
 # 4) plot distribution of average identity
 plt.figure()
-df["avg_identity"].hist(bins=30)
+df60["avg_identity"].hist(bins=30)
 plt.xlabel("Average identity (%)")
 plt.ylabel("Count")
 plt.title("Distribution of average identity")
@@ -57,11 +61,11 @@ plt.tight_layout()
 plt.show()
 
 # 5) pull out the most and least conserved by quantile
-high_q = df["avg_identity"].quantile(0.9)
-low_q  = df["avg_identity"].quantile(0.1)
+high_q = df60["avg_identity"].quantile(0.9)
+low_q  = df60["avg_identity"].quantile(0.1)
 
-most_conserved = df[df["avg_identity"] >= high_q]
-least_conserved = df[df["avg_identity"] <= low_q]
+most_conserved = df60[df60["avg_identity"] >= high_q]
+least_conserved = df60[df60["avg_identity"] <= low_q]
 
 out_dir = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/results_figures"
 most_conserved.to_csv(f"{out_dir}/most_conserved_top10pct.csv", index=False)

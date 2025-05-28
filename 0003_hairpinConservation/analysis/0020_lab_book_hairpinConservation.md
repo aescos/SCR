@@ -17,17 +17,17 @@ CG6282 = FBgn0035914
 path(/Users/alejandraescos/Documents/github/SCR/0002_phylogenetics/data)
 
 2.  DATA-DATE:
-20250512
+20250527
 
 3.  DATA-VERSION:
-SUPERMATRIX.fasta
+0019_fa_chunks_trimmed
 
 4.  DOWLOADED-SCRIPT:
 
 ```
 python3 /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/script/0020_extract_hairpin_windows.py \
-  -i /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_trimmed \
-  -o /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_trimmed_by_stop \
+  -i /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0019_fa_chunks_trimmed \
+  -o /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0020_fa_chunks_trimmed_by_stop \
   -r 0005_Drosophila_melanogaster_dna \
   -L 60
 ```
@@ -189,5 +189,5 @@ if __name__=='__main__':
     main()
 ```
 
-
 5.  SOFTWARE-VERSION:
+python 3.12.4

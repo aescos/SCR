@@ -15,17 +15,17 @@ CG6282 = FBgn0035914
 path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 
 2.  DATA-DATE:
-20250512
+20250527
 
 3.  DATA-VERSION:
-SUPERMATRIX.fasta
+0020_fa_chunks_trimmed_by_stop
 
 4.  DOWLOADED-SCRIPT:
 
 Clean up duplicate Stockholm headers so downstream tools (e.g. esl-alistat) won’t complain.
 
 ```
-cd /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_trimmed_by_stop
+cd /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0020_fa_chunks_trimmed_by_stop
 mkdir -p 0022_fa_chunks_60nt_stats
 
 for f in *.sto; do

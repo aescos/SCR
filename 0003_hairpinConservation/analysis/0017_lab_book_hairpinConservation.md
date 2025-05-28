@@ -9,17 +9,17 @@ Basic structure:
 drifter,vvl = FBgn0086680
 CG6282 = FBgn0035914
 
-### Obtain maf_chunks
+### Obtain maf_chunks from HAL file
 
 
 1.  DATA-ORIGIN:
 path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 
 2.  DATA-DATE:
-20250521
+20250526
 
 3.  DATA-VERSION:
-
+0016_dmle_selected_three_prime_utr_extend.bed
 
 4.  DOWLOADED-SCRIPT:
 

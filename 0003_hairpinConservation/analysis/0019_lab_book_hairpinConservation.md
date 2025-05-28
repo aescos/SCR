@@ -21,7 +21,7 @@ CG6282 = FBgn0035914
 path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 
 2.  DATA-DATE:
-20250522
+20250526
 
 3.  DATA-VERSION:
 0018_fa_chunks folder
@@ -31,7 +31,7 @@ path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 ```
 python3 "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/script/0019_presto.py" \
   -i "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0018_fa_chunks" \
-  -o "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/fa_chunks_trimmed" \
+  -o "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0019_fa_chunks_trimmed" \
   -l 32 \
   -e .fa
 ```
@@ -172,4 +172,4 @@ if __name__ == '__main__':
 ```
 
 5.  SOFTWARE-VERSION:
-
+python 3.12.4

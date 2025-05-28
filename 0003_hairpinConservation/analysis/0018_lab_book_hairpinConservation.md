@@ -16,10 +16,10 @@ CG6282 = FBgn0035914
 path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 
 2.  DATA-DATE:
-20250521
+20250526
 
 3.  DATA-VERSION:
-
+0016_dmle_selected_three_prime_utr_extend.bed
 
 4.  DOWLOADED-SCRIPT:
 
@@ -113,4 +113,4 @@ for maf_file, strand in maf_strand.items():
 ```
 
 5.  SOFTWARE-VERSION:
-
+python 3.12.4
