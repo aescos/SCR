@@ -19,13 +19,8 @@ Trim the file to take the 60 first nt of the 3'UTR
 
 - trim_length = 60
 
-```zsh 5.9 (arm64-apple-darwin24.0)
-
-    python3 0003_test.py
-
+python 3.12.4, script 0004_trim.py
 ```
-
-```python 3.12.4 # script 0004_trim.py
 import os
 import glob
 

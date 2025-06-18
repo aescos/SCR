@@ -17,6 +17,7 @@ path(/Users/alejandraescos/Documents/github/SCR/data)
 3.  DATA-VERSION:
 
 4.  DOWLOADED-SCRIPT:
+0002_gtf_split_atributes.py
 ```
 def parse_attributes(attr_string):
     attrs = {}

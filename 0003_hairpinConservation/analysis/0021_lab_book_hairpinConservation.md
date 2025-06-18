@@ -26,21 +26,21 @@ Clean up duplicate Stockholm headers so downstream tools (e.g. esl-alistat) wonâ
 
 ```
 cd /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0020_fa_chunks_trimmed_by_stop
-mkdir -p 0022_fa_chunks_60nt_stats
+mkdir -p 0021_fa_chunks_60nt_stats
 
 for f in *.sto; do
   awk '
     NR==1 { print; next }
     $0 == "# STOCKHOLM 1.0" && NR==2 { next }
     { print }
-  ' "$f" > 0022_fa_chunks_60nt_stats/"$f"
+  ' "$f" > 0021_fa_chunks_60nt_stats/"$f"
 done
 ```
 It performed the statistics of the sequence conservation
 ```
-for a in 0022_fa_chunks_60nt_stats/*.sto; do
+for a in 0020_fa_chunks_trimmed_by_stop/*.sto; do
   base=$(basename "$a" .sto)
-  esl-alistat "$a" > 0022_fa_chunks_60nt_stats/"$base".txt
+  esl-alistat "$a" > 0020_fa_chunks_trimmed_by_stop/"$base".txt
 done
 ```
 it give this error:

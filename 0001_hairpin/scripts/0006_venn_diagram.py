@@ -5,7 +5,7 @@ from matplotlib_venn import venn2
 
 # Paths to input and output
 file_mfe = '/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/0007_subopt_Y_minMFE.txt'
-file_genelist = '/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/jungreis_genelist_2016.txt'
+file_genelist = '/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/jungreis_genelist_2016_dmle.txt'
 output_dir = '/Users/alejandraescos/Documents/github/SCR/0001_hairpin/results_figures'
 output_file = os.path.join(output_dir, 'venn_diagram.png')
 
@@ -16,7 +16,7 @@ df_mfe = pd.read_csv('/Users/alejandraescos/Documents/github/SCR/0001_hairpin/da
 set_mfe = set(df_mfe.iloc[:, 0].dropna().astype(str))
 
 # Read the second column (column 1) from the Jungreis gene list file
-df_genelist = pd.read_csv('/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/jungreis_genelist_2016.txt', sep='\t', header=None, usecols=[1])
+df_genelist = pd.read_csv('/Users/alejandraescos/Documents/github/SCR/0001_hairpin/data/jungreis_genelist_2016_dmle.txt', sep='\t', header=None, usecols=[1])
 set_genelist = set(df_genelist.iloc[:, 0].dropna().astype(str))
 
 # Plot Venn diagram with custom colors

@@ -13,12 +13,12 @@ with open("/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/d
     for line in bed:
         if not line.strip(): continue
         chrom, start, end, name, *_ , strand = line.split()
-        key = f"0017_maf_chunks/{name}_{chrom}_{start}_{end}.maf"
+        key = f"0017_filtered_mafs/{name}_{chrom}_{start}_{end}.maf"
         maf_strand[key] = strand
 
 # 2) process each MAF
 for maf_file, strand in maf_strand.items():
-    out_fa = maf_file.replace("0017_maf_chunks", "0018_fa_chunks").replace(".maf", ".fa")
+    out_fa = maf_file.replace("0017_filtered_mafs", "0018_fa_chunks").replace(".maf", ".fa")
     os.makedirs(os.path.dirname(out_fa), exist_ok=True)
 
     # collect and stitch blocks
@@ -49,7 +49,7 @@ for maf_file, strand in maf_strand.items():
     # group by “species” prefix (adjust split as appropriate)
     groups = defaultdict(list)
     for k in concatenated:
-        species = k.split("_")[0]  # or however you identify your species
+        species = k.split(".")[0]  # or however you identify your species
         groups[species].append(k)
 
     to_remove = []

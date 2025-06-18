@@ -25,8 +25,8 @@ then also change the configuration of the hairpin:
 Length_min = 35
 
 The output version of the files will be:
-
-```python 3.12.4
+python 3.12.4, 0006_hairpin_select.py
+```
 import re
 import csv
 import sys
