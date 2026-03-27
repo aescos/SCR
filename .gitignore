@@ -1,14 +1,110 @@
+# =========================
+# OS / system
+# =========================
 .DS_Store
-.Rproj.user
+Thumbs.db
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# R (optional, since you have some R)
+# =========================
+.Rhistory
+.RData
+.Rproj.user/
+
+# =========================
+# Large sequencing data
+# =========================
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# =========================
+# Alignment files
+# =========================
+*.bam
+*.bai
+*.sam
+*.cram
+*.bed
+*.tsv
+*.csv
+*.xlsx
+
+# =========================
+# Coverage / intermediate outputs
+# =========================
+*.CDS.txt
+*.RT.txt
+data/coverage/
+data/bam/
+data/raw/
+*.html
+
+# =========================
+# Annotation heavy files
+# =========================
+*.gtf
+*.gtf.gz
+*.gff
+*.gff3
+*.db
+
+# =========================
+# Temporary / logs
+# =========================
+*.log
+*.err
+*.out
+
+# =========================
+# Figures (optional)
+# =========================
+# Uncomment if you don't want to track images
+*.png
+*.jpg
+*.pdf
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Misc large binaries
+# =========================
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.pdf~
 *.pptx
-# external data
+~$*
+
+# =========================
+# Project-specific ignores
+# =========================
+
+# Old datasets / projects (your existing ones)
 0001_hairpin/data
 0001_hairpin/seqs
+0002_phylogenetics/data
 0002_phylogenetics/vvl
 0002_phylogenetics/CG6282
-0002_phylogenetics/data
 0003_hairpinConservation/data
 0003_miRNA/data
-# large binaries
-2025_SCR.pptx
-~$CG6282.docx
+0005_riboseq/result/
