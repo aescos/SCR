@@ -31,6 +31,7 @@ __pycache__/
 *.fastq.gz
 *.fq
 *.fq.gz
+*.fa
 
 # =========================
 # Alignment files
@@ -38,6 +39,7 @@ __pycache__/
 *.bam
 *.bai
 *.sam
+*.maf
 *.cram
 *.bed
 *.tsv
