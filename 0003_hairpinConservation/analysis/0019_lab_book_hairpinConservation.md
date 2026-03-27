@@ -30,8 +30,8 @@ path(/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation)
 
 ```
 python3 "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/script/0019_presto.py" \
-  -i "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0018_fa_chunks" \
-  -o "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0019_fa_chunks_trimmed" \
+  -i "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0018_I_fa_chunks" \
+  -o "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0019_I_fa_chunks_trimmed" \
   -l 32 \
   -e .fa
 ```

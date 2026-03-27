@@ -3,7 +3,7 @@ import pandas as pd
 
 # Read selected gene list from BED file
 sel = pd.read_csv(
-    "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0007_subopt_Y_minMFE.bed",
+    "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/0007_I_subopt_Y_minMFE.bed",
     skiprows=1,
     sep='\t',
     header=None
@@ -11,8 +11,8 @@ sel = pd.read_csv(
 selected_list = set(sel[0].astype(str))
 
 # === CONFIG ===
-gtf_file = "Drosophila_melanogaster.BDGP6.46.60.gtf"
-output_bed = "0015_dmle_selected_three_prime_utr.bed"
+gtf_file = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/Drosophila_melanogaster.BDGP6.46.60.gtf"
+output_bed = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/0015_I_dmle_selected_three_prime_utr.bed"
 feature_type = "three_prime_utr"
 attribute_key = "gene_id"
 

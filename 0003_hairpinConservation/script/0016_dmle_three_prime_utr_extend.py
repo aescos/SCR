@@ -1,6 +1,6 @@
 # Input and output file paths
-input_bed = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0015_dmle_selected_three_prime_utr.bed"
-output_bed = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0016_dmle_selected_three_prime_utr_extend.bed"
+input_bed = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/0015_I_dmle_selected_three_prime_utr.bed"
+output_bed = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/0016_I_dmle_selected_three_prime_utr_extend.bed"
 
 # Process the BED file
 with open(input_bed, "r") as infile, open(output_bed, "w") as outfile:

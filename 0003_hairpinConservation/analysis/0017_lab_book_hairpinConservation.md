@@ -86,3 +86,25 @@ EOF
 
 5.  SOFTWARE-VERSION:
 
+
+Basic structure:
+1.  DATA-ORIGIN:
+2.  DATA-DATE:
+3.  DATA-VERSION:
+4.  DOWLOADED-SCRIPT
+5.  SOFTWARE-VERSION:
+6.  METHODS/WORKFLOWS
+
+drifter,vvl = FBgn0086680
+CG6282 = FBgn0035914
+
+```
+./0017_clean_gapped_maf.py \
+  -i /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/0017_I_maf_chunks \
+  -o /Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/Ioannis/data/0017_I_filtered_mafs \
+  -e .maf \
+  -l 92 \
+  -g 0
+
+```
+

@@ -9,16 +9,16 @@ import os
 
 # 1) read the BED to get the strand for each region
 maf_strand = {}
-with open("/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0016_dmle_selected_three_prime_utr_extend.bed") as bed:
+with open("/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0016_I_dmle_selected_three_prime_utr_extend.bed") as bed:
     for line in bed:
         if not line.strip(): continue
         chrom, start, end, name, *_ , strand = line.split()
-        key = f"0017_filtered_mafs/{name}_{chrom}_{start}_{end}.maf"
+        key = f"0017_I_filtered_mafs/{name}_{chrom}_{start}_{end}.maf"
         maf_strand[key] = strand
 
 # 2) process each MAF
 for maf_file, strand in maf_strand.items():
-    out_fa = maf_file.replace("0017_filtered_mafs", "0018_fa_chunks").replace(".maf", ".fa")
+    out_fa = maf_file.replace("0017_I_filtered_mafs", "0018_I_fa_chunks").replace(".maf", ".fa")
     os.makedirs(os.path.dirname(out_fa), exist_ok=True)
 
     # collect and stitch blocks
@@ -26,17 +26,27 @@ for maf_file, strand in maf_strand.items():
     total_cols = 0
 
     with open(maf_file) as handle:
-        for aln in AlignIO.parse(handle, "maf"):
-            blk_len = aln.get_alignment_length()
-            # pad any new species to the current total, then append this block
-            for rec in aln:
-                if rec.id not in concatenated:
-                    concatenated[rec.id] = ""
-                pad = total_cols - len(concatenated[rec.id])
-                if pad > 0:
-                    concatenated[rec.id] += "-" * pad
-                concatenated[rec.id] += str(rec.seq)
-            total_cols += blk_len
+    for aln in AlignIO.parse(handle, "maf"):
+        blk_len = aln.get_alignment_length()
+
+        # Which species are present in this block?
+        present = set(rec.id for rec in aln)
+
+        # 1) For any species we have already seen but that is missing in THIS block,
+        #    append gaps for this entire block.
+        for sid in list(concatenated.keys()):
+            if sid not in present:
+                concatenated[sid] += "-" * blk_len
+
+        # 2) For species that are present, append their sequence.
+        #    If it is a new species, first pad it up to total_cols (previous blocks).
+        for rec in aln:
+            sid = rec.id
+            if sid not in concatenated:
+                concatenated[sid] = "-" * total_cols  # pad all previous columns
+            concatenated[sid] += str(rec.seq)
+
+        total_cols += blk_len
 
     # final pad so everyone reaches total_cols
     for k in concatenated:

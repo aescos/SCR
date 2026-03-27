@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 # ----------------------------------------------------------------
 # CONFIGURE THIS: wherever your .txt files live
-stats_dir = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0021_fa_chunks_60nt_stats"
+stats_dir = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/data/0020_I_fa_chunks_trimmed_by_stop"
 pattern   = os.path.join(stats_dir, "*.txt")
 # ----------------------------------------------------------------
 
@@ -22,14 +22,17 @@ for path in txt_files:
     txt  = open(path).read()
     Lm   = re.search(r"Alignment length:\s+(\d+)", txt)
     Im   = re.search(r"Average identity:\s+(\d+)%", txt)
+    Sm   = re.search(r"Number of sequences:\s+(\d+)", txt)
     if not Lm or not Im:
         continue
     L = int(Lm.group(1))
     I = float(Im.group(1))
+    S = int(Sm.group(1))
     records.append({
-        "alignment":   name,
-        "aln_length":  L,
-        "avg_identity": I
+        "alignment":    name,
+        "aln_length":   L,
+        "avg_identity":  I,
+        "num_species": S
     })
 
 # 2) build DataFrame
@@ -38,35 +41,43 @@ print("number of records parsed:", len(df))
 print("columns:", df.columns.tolist())
 print(df.head())
 
-# ** NEW: keep only the 60-nt windows **
-df60 = df[df["aln_length"] == 60].copy()
-print("only 60-nt windows:", len(df60))
+
+# Test plot Number of species per alignment
+plt.figure()
+df["num_species"].hist(bins=30)
+plt.xlabel("Number of sequences (columns)")
+plt.ylabel("Count")
+plt.title("Number of species per alignment")
+plt.tight_layout()
+plt.show()
+
+df_species29 = df[df["num_species"] >= 29]
 
 # 3) plot distribution of alignment lengths
 plt.figure()
-df["aln_length"].hist(bins=30)
+df_species29["aln_length"].hist(bins=30)
 plt.xlabel("Alignment length (columns)")
 plt.ylabel("Count")
-plt.title("Distribution of alignment lengths")
+plt.title("Distribution of alignment lengths (> 29 scpecies)")
 plt.tight_layout()
 plt.show()
 
 # 4) plot distribution of average identity
 plt.figure()
-df60["avg_identity"].hist(bins=30)
+df_species29["avg_identity"].hist(bins=30)
 plt.xlabel("Average identity (%)")
 plt.ylabel("Count")
-plt.title("Distribution of average identity")
+plt.title("Distribution of average identity (> 29 scpecies)")
 plt.tight_layout()
 plt.show()
 
 # 5) pull out the most and least conserved by quantile
-high_q = df60["avg_identity"].quantile(0.9)
-low_q  = df60["avg_identity"].quantile(0.1)
+high_q = df_species29["avg_identity"].quantile(0.9)
+medium_q  = df_species29["avg_identity"].quantile(0.60)
 
-most_conserved = df60[df60["avg_identity"] >= high_q]
-least_conserved = df60[df60["avg_identity"] <= low_q]
+most_conserved = df_species29[df_species29["avg_identity"] >= high_q]
+medium_conserved = df_species29[df_species29["avg_identity"] >= medium_q]
 
 out_dir = "/Users/alejandraescos/Documents/github/SCR/0003_hairpinConservation/results_figures"
 most_conserved.to_csv(f"{out_dir}/most_conserved_top10pct.csv", index=False)
-least_conserved.to_csv(f"{out_dir}/least_conserved_bottom10pct.csv", index=False)
+medium_conserved.to_csv(f"{out_dir}/medium_conserved_top40pct.csv", index=False)
